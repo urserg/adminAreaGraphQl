@@ -1,6 +1,6 @@
-import { Sequelize } from '@sequelize/core';
-import getUserModel from "./user";
+import {Sequelize} from '@sequelize/core';
 import getPostModel from "./post";
+import getUserModel from "./user";
 
 const sequelize = new Sequelize(
   'postgres://postgres:postgrespw@localhost:49154/postgres',

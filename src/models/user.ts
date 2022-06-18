@@ -1,4 +1,4 @@
-import {Sequelize, DataTypes, Model} from "@sequelize/core";
+import {DataTypes, Model, Sequelize} from "@sequelize/core";
 
 const getUserModel = (sequelize: Sequelize) => {
 

@@ -1,8 +1,9 @@
 import * as express from 'express';
 import {createServer} from "http";
 import {createApolloServer} from "./apollo-server";
-import {sequelize, models} from "./models";
 import {PORT} from "./constants";
+import {models, sequelize} from "./models";
+
 const app = express();
 
 async function main() {
