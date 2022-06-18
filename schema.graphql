@@ -1,7 +1,8 @@
 type Query {
   currentUser: User!
   user(id: String!): User
-  tweets: [Post!]
+  users: [User]
+  posts: [Post!]
   trends: [Trend!]
   suggestions: [Suggestion!]
 }

@@ -5,6 +5,10 @@ const getPostModel = (sequelize: Sequelize) => {
   class Post extends Model {
     declare name: String
     declare avatarUrl: String
+
+    static associate(models: any) {
+      Post.belongsTo(models.User)
+    }
   }
 
   Post.init({

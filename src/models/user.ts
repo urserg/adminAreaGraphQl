@@ -7,7 +7,6 @@ const getUserModel = (sequelize: Sequelize) => {
     declare avatarUrl: String
 
     static associate(models: any) {
-      console.log("models", models)
       User.hasMany(models.Post)
     }
   }

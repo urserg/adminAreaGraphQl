@@ -1,8 +1,9 @@
-import TwitterQueryResolver from './resolvers/Query';
+import QueryResolver from './resolvers/Query';
+import UserResolver from './resolvers/User';
 
 export function createResolvers() {
-  const resolvers = {
-    Query: TwitterQueryResolver,
+  return {
+    Query: QueryResolver,
+    User: UserResolver,
   };
-  return resolvers;
 }
