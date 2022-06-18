@@ -6,7 +6,7 @@ import {ApolloServer, ExpressContext} from 'apollo-server-express';
 import * as express from 'express';
 import {Server} from 'http';
 import {GRAPHQL_SCHEMA_PATH} from "./constants";
-import createResolvers from './resolvers';
+import {createResolvers} from './resolvers';
 
 const schema = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
   loaders: [new GraphQLFileLoader()],
