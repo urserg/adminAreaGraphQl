@@ -7,14 +7,14 @@ const getPostModel = (sequelize: Sequelize) => {
     declare avatarUrl: String
 
     static associate(models: any) {
-      Post.belongsTo(models.User)
+      Post.belongsTo(models.User, { foreignKey: { allowNull: false }, onDelete: 'CASCADE' })
     }
   }
 
   Post.init({
     title: {
       type: DataTypes.STRING,
-      unique: true,
+      unique: false,
       allowNull: false,
       validate: {
         notEmpty: true,

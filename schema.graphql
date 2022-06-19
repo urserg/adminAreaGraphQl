@@ -10,7 +10,7 @@ type DeletionResult {
   deleted: [String!]
 }
 type Mutation {
-  createTweet(userId: String!, body: String!): Post!
+  createPost(title: String!, body: String!): Post!
   createFavorite(tweetId: String!, userId: String!): Favorite!
   deleteFavorite(tweetId: String!, userId: String!): Favorite!
 }

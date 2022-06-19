@@ -7,7 +7,7 @@ const getUserModel = (sequelize: Sequelize) => {
     declare avatarUrl: String
 
     static associate(models: any) {
-      User.hasMany(models.Post)
+      User.hasMany(models.Post,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' })
     }
   }
 
