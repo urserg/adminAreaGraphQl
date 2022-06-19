@@ -11,6 +11,8 @@ type DeletionResult {
 }
 type Mutation {
   createPost(title: String!, body: String!): Post!
+  deletePost(id: ID!): Post!
+  updatePost(id: ID!, title: String!, body: String!): Post!
   createFavorite(tweetId: String!, userId: String!): Favorite!
   deleteFavorite(tweetId: String!, userId: String!): Favorite!
 }

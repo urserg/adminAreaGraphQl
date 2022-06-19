@@ -32,17 +32,17 @@ const getUserModel = (sequelize: Sequelize) => {
   return User;
 }
 
-// User.associate = (models) => {
-//   User.hasMany(models.Message, { onDelete: 'CASCADE' });
+// Post.associate = (models) => {
+//   Post.hasMany(models.Message, { onDelete: 'CASCADE' });
 // };
 //
-// User.findByLogin = async (login) => {
-//   let user = await User.findOne({
+// Post.findByLogin = async (login) => {
+//   let user = await Post.findOne({
 //     where: { username: login },
 //   });
 //
 //   if (!user) {
-//     user = await User.findOne({
+//     user = await Post.findOne({
 //       where: { email: login },
 //     });
 //   }

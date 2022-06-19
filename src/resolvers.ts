@@ -1,7 +1,7 @@
-import {MutationResolver} from "./resolvers/Mutations";
 import QueryResolver from './resolvers/Query';
 import UserResolver from './resolvers/User';
 import {Resolvers} from "./resolvers-types.generated";
+import {Mutation} from "./resolvers/Mutations/Mutation";
 
 export interface ResolverContext {
   models: Record<string, any>;
@@ -14,6 +14,6 @@ export function createResolvers(): Resolvers<ResolverContext> {
   return {
     Query: QueryResolver,
     User: UserResolver,
-    Mutation: MutationResolver
+    Mutation: Mutation
   };
 }
